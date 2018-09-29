@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/3506a79b-e532-475c-a995-753c5ee38cc1/resourceGroups/Contracto/providers/Microsoft.Web/sites/Contracto",
+    "appService.deploySubpath": "dist\\contracto"
+}
