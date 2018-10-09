@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 import { ClauseComponent } from './clause/clause.component';
+import { HealthComponent } from './health/health.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'clause',
     component: ClauseComponent
+  },
+  {
+    path: 'health',
+    component: HealthComponent
   },
 
 ];

@@ -11,6 +11,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UsersComponent } from './users/users.component';
 import { ClauseComponent } from './clause/clause.component';
 import { DetailsComponent } from './details/details.component';
+import { HealthComponent } from './health/health.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { DetailsComponent } from './details/details.component';
     UsersComponent,
     ClauseComponent,
     DetailsComponent,
+    HealthComponent,
     
   ],
   imports: [

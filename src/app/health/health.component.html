@@ -1,0 +1,18 @@
+<h1>Health</h1>
+{{message$ | json}}
+<h2>{{message$.title}}</h2>
+
+<ul>
+  <li *ngFor="let mes of message$.paragraphs">
+    <p *ngFor="let sentence of mes.sentences">{{sentence}}</p>
+        <div *ngIf="message$"><li>Text to show</li></div>
+    
+   <ul> <li *ngFor="let term of mes.terms"> 
+     <label>{{term.name}}: </label>
+     <select class="form-control" id="power" required>
+      <option *ngFor="let value of term.values" [value]="value">{{value}}</option>
+    </select>
+    </ul>
+  </li>
+</ul>
+
