@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import {DocumentFragment} from './service/fragment'
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +26,7 @@ export class DataService {
     return this.http.get('http://contractoback.azurewebsites.net/yo?secret=po')
   }
 
-  getFragment(name){
-    return this.http.get('http://localhost:8080/fragment?name='+name)
+  getFragment(name):Observable<DocumentFragment>{
+    return this.http.get('http://localhost:8080/fragment?name='+name, this.REQ)
   }
 }
