@@ -26,7 +26,7 @@ export class DataService {
     return this.http.get('http://contractoback.azurewebsites.net/yo?secret=po')
   }
 
-  getFragment(name):Observable<DocumentFragment>{
-    return this.http.get('http://localhost:8080/fragment?name='+name, this.REQ)
+  getFragment(name){
+    return this.http.get('http://localhost:8080/fragment?name='+name)
   }
 }

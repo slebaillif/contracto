@@ -8,13 +8,13 @@ import { Observable } from 'rxjs';
   styleUrls: ['./clause.component.scss']
 })
 export class ClauseComponent implements OnInit {
-  posts$: Object;
+  posts$: DocumentFragment;
   
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.data.getPosts().subscribe(
-      data => this.posts$ = data 
+      data => this.posts$ = <DocumentFragment>data 
     );
   }
 
