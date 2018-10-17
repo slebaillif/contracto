@@ -1,0 +1,5 @@
+<h1>Choose Template</h1>
+
+<select class="form-control" id="templ" required>
+  <option *ngFor="let value of templateList$" [value]="value">{{value}}</option>
+</select>

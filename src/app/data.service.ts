@@ -29,4 +29,12 @@ export class DataService {
   getFragment(name){
     return this.http.get('http://localhost:8080/fragment?name='+name)
   }
+
+  getTemplate(name){
+    return this.http.get('http://localhost:8080/template?name='+name)
+  }
+
+  getTemplateList(){
+    return this.http.get('http://localhost:8080/templateList')
+  }
 }

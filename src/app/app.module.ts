@@ -12,6 +12,9 @@ import { UsersComponent } from './users/users.component';
 import { ClauseComponent } from './clause/clause.component';
 import { DetailsComponent } from './details/details.component';
 import { HealthComponent } from './health/health.component';
+import { DocTemplateComponent } from './doc-template/doc-template.component';
+import { DocFragmentComponent } from './doc-fragment/doc-fragment.component';
+import { TemplateListComponent } from './template-list/template-list.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { HealthComponent } from './health/health.component';
     ClauseComponent,
     DetailsComponent,
     HealthComponent,
+    DocTemplateComponent,
+    DocFragmentComponent,
+    TemplateListComponent
     
   ],
   imports: [

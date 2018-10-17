@@ -1,0 +1,15 @@
+<h2>{{message$.title}}</h2>
+
+<ul>
+  <li *ngFor="let mes of message$.paragraphs">
+    <div *ngFor="let sentence of mes.sentences">
+        <ng-template *ngIf="termSentence$[sentence] ; then thenBlock else elseBlock"></ng-template>
+        <ng-template #thenBlock>{{termForSentence$[sentence].name}}: 
+            <select class="form-control" id="power" required>
+                <option *ngFor="let value of termForSentence$[sentence].values" [value]="value">{{value}}</option>
+              </select>
+        </ng-template>
+        <ng-template #elseBlock>{{sentence}}</ng-template>
+    </div>
+  </li>
+</ul>
