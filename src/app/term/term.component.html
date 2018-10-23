@@ -1,0 +1,13 @@
+<h1>Term Definition</h1>
+
+<h2>"{{termDefinition$.name}}"</h2>
+
+<h3>Description</h3>
+<p>
+  {{termDefinition$.description}}
+</p>
+
+<h3>Possible values</h3>
+<ul>
+  <li *ngFor="let value of termDefinition$.values">{{value}}</li>
+</ul>

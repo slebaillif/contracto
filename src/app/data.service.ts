@@ -37,4 +37,8 @@ export class DataService {
   getTemplateList(){
     return this.http.get('http://localhost:8080/templateList')
   }
+
+  getTerm(name){
+    return this.http.get(encodeURI('http://localhost:8080/term?term='+name));
+  }
 }

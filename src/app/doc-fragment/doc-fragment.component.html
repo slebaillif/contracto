@@ -4,7 +4,8 @@
   <li *ngFor="let mes of message$.paragraphs">
     <div *ngFor="let sentence of mes.sentences">
         <ng-template *ngIf="termSentence$[sentence] ; then thenBlock else elseBlock"></ng-template>
-        <ng-template #thenBlock>{{termForSentence$[sentence].name}}: 
+        <ng-template #thenBlock>
+          <a [routerLink]="['/term', termForSentence$[sentence].name]">{{termForSentence$[sentence].name}}</a>: 
             <select class="form-control" id="power" required>
                 <option *ngFor="let value of termForSentence$[sentence].values" [value]="value">{{value}}</option>
               </select>

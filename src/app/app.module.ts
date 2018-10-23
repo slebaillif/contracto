@@ -15,6 +15,8 @@ import { HealthComponent } from './health/health.component';
 import { DocTemplateComponent } from './doc-template/doc-template.component';
 import { DocFragmentComponent } from './doc-fragment/doc-fragment.component';
 import { TemplateListComponent } from './template-list/template-list.component';
+import { FormsModule } from '@angular/forms';
+import { TermComponent } from './term/term.component';
 
 @NgModule({
   declarations: [
@@ -26,14 +28,16 @@ import { TemplateListComponent } from './template-list/template-list.component';
     HealthComponent,
     DocTemplateComponent,
     DocFragmentComponent,
-    TemplateListComponent
+    TemplateListComponent,
+    TermComponent
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
 
   ],
   providers: [],

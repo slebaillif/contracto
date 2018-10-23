@@ -1,5 +1,9 @@
 <h1>Choose Template</h1>
 
-<select class="form-control" id="templ" required>
+<select [(ngModel)]="selectedTemplate" (change)="onSelectTemplate($event.target.value)" class="form-control" id="templ" required>
   <option *ngFor="let value of templateList$" [value]="value">{{value}}</option>
 </select>
+
+<div>
+<app-doc-template [(name)]='selectedTemplate'></app-doc-template>
+</div>
