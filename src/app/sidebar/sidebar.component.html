@@ -26,9 +26,14 @@
         </a>
       </li>
       <li>
-        <a routerLink="term" [class.activated]="currentUrl == '/term'">
+        <a routerLink="term" [class.activated]="currentUrl.startsWith( '/term')">
           <i class="material-icons">subject</i>
         </a>
       </li>
+      <li>
+          <a routerLink="addterm" [class.activated]="currentUrl.startsWith( '/addterm')">
+            <i class="material-icons">note_add</i>
+          </a>
+        </li>
   </ul>
 </nav>

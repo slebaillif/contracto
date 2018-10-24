@@ -17,6 +17,7 @@ import { DocFragmentComponent } from './doc-fragment/doc-fragment.component';
 import { TemplateListComponent } from './template-list/template-list.component';
 import { FormsModule } from '@angular/forms';
 import { TermComponent } from './term/term.component';
+import { AddtermComponent } from './addterm/addterm.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { TermComponent } from './term/term.component';
     DocTemplateComponent,
     DocFragmentComponent,
     TemplateListComponent,
-    TermComponent
+    TermComponent,
+    AddtermComponent
     
   ],
   imports: [

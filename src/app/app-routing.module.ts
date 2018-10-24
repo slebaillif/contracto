@@ -5,6 +5,7 @@ import { DetailsComponent } from './details/details.component';
 import { ClauseComponent } from './clause/clause.component';
 import { HealthComponent } from './health/health.component';
 import { TermComponent } from './term/term.component';
+import { AddtermComponent } from './addterm/addterm.component';
 import { DocTemplateComponent } from './doc-template/doc-template.component';
 import {TemplateListComponent} from './template-list/template-list.component';
 
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'term',
     component: TermComponent
+  },
+  {
+    path: 'addterm',
+    component: AddtermComponent
   }
 ];
 
