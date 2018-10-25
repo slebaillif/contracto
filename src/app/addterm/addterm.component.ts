@@ -16,7 +16,7 @@ import { HttpClient } from '@angular/common/http';
 export class AddtermComponent implements OnInit {
 
   newTerm:DictonaryTerm;
-  values:Object[];
+  values;
   
 
   constructor(private http: HttpClient) {
