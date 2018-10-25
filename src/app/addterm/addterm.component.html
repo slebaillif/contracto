@@ -11,10 +11,15 @@
   <textarea [(ngModel)]="newTerm.description" name="description" id="description" required #description="ngModel"></textarea>
   <div [hidden]="description.valid || description.pristine" class="alert alert-danger">Description is required</div>
 </div>
-<div class="form-group">
-  <label>Possible values:</label>
-
-</div>
-
 <button type="submit" class="btn btn-success" [disabled]="!termForm.form.valid">Submit</button>
 </form>
+<div class="form-group">
+  <label>Possible values:</label><button  (click)="addValue()"><i class="material-icons">add</i></button>
+  <ul>
+      
+    <li *ngFor="let v of values; let i=index"><input  [(ngModel)]="v.name" type="text" class="form-control"/>
+      <button  (click)="removeValue(i)"><i class="material-icons">remove</i></button></li>
+      
+  </ul>
+</div>
+

@@ -16,21 +16,36 @@ import { HttpClient } from '@angular/common/http';
 export class AddtermComponent implements OnInit {
 
   newTerm:DictonaryTerm;
+  values:Object[];
   
 
   constructor(private http: HttpClient) {
-    this.newTerm={name:"enter a name", description:"enter a description", values:[]};
+    this.newTerm={name:"enter a name", description:"enter a description", values:["aaa"]};
+    this.values=[{name:"aaa"}, {name:"bbb"}];
    }
 
   ngOnInit() {
   }
 
   onSubmit(){
-    
+    this.newTerm.values = [];
+    this.values.forEach(element => {
+      this.newTerm.values.push(element.name);
+    });
     let httpOptions = {      headers: new HttpHeaders({        'Content-Type':  'application/json'})};
     let ob = this.http.post<DictonaryTerm>("http://localhost:8080/addterm", this.newTerm, httpOptions);
     ob.subscribe(d => {console.log("result:"+d)}); 
+    
     console.log("Submitted:"+this.newTerm);
+  }
+
+  addValue(){
+    console.log("AddValue clickes");
+    this.values.push({name:"new value"});
+  }
+
+  removeValue(i){
+    this.values.splice(i,1);
   }
 
 }
