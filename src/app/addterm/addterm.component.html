@@ -8,18 +8,19 @@
 </div>
 <div class="form-group">
   <label for="description">Decription:</label>
-  <textarea [(ngModel)]="newTerm.description" name="description" id="description" required #description="ngModel"></textarea>
+  <textarea [(ngModel)]="newTerm.description" class="form-control" name="description" id="description" required #description="ngModel"></textarea>
   <div [hidden]="description.valid || description.pristine" class="alert alert-danger">Description is required</div>
 </div>
-<button type="submit" class="btn btn-success" [disabled]="!termForm.form.valid">Submit</button>
-</form>
+
 <div class="form-group">
-  <label>Possible values:</label><button  (click)="addValue()"><i class="material-icons">add</i></button>
+  <label>Possible values:</label><button  type="button" (click)="addValue()"><i class="material-icons">add</i></button>
   <ul>
       
-    <li *ngFor="let v of values; let i=index"><input  [(ngModel)]="v.name" type="text" class="form-control"/>
-      <button  (click)="removeValue(i)"><i class="material-icons">remove</i></button></li>
+    <li *ngFor="let v of values; let i=index"><input  [(ngModel)]="v.name" type="text" class="form-control" [ngModelOptions]="{standalone: true}"/>
+      <button  (click)="removeValue(i)" type="button"><i class="material-icons">remove</i></button></li>
       
   </ul>
 </div>
 
+<button type="submit" class="btn btn-success" [disabled]="!termForm.form.valid">Submit</button>
+</form>
