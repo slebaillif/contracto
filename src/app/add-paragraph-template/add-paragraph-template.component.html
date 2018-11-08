@@ -1,0 +1,25 @@
+<h1>Create Paragraph Template</h1>
+<form (ngSubmit)="onSubmit()" #termForm="ngForm">
+
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input [(ngModel)]="newFragment.title" name="title" type="text" class="form-control" id="title" required #title="ngModel" />
+    <div [hidden]="title.valid || title.pristine" class="alert alert-danger">Title is required.</div>
+  </div>
+  <div class="form-group">
+    <label for="paragraph">Paragraph:</label>
+    <textarea [(ngModel)]="newParagraph.paragraph" (keypress)=filter($event) class="form-control" name="paragraph" id="paragraph"
+      required #paragraph="ngModel" rows="6"></textarea>
+    <div [hidden]="paragraph.valid || paragraph.pristine" class="alert alert-danger">Paragraph is required.</div>
+  </div>
+  <div class="suggestions" *ngIf="filteredList.length > 0">
+    <ul *ngFor="let item of filteredList">
+      <li>
+        <a (click)="select(item)">{{item.name}}</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <button type="submit" class="btn btn-success" [disabled]="!termForm.form.valid">Submit</button>
+</form>

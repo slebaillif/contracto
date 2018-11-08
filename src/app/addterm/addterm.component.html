@@ -1,26 +1,28 @@
 <h1>Create Term</h1>
 <form (ngSubmit)="onSubmit()" #termForm="ngForm">
-  
-<div class="form-group">
-  <label for="name">Term name:</label> 
-  <input [(ngModel)]="newTerm.name" name="name" type="text" class="form-control" id="name" required #name="ngModel"/>
-  <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div>
-</div>
-<div class="form-group">
-  <label for="description">Decription:</label>
-  <textarea [(ngModel)]="newTerm.description" class="form-control" name="description" id="description" required #description="ngModel"></textarea>
-  <div [hidden]="description.valid || description.pristine" class="alert alert-danger">Description is required</div>
-</div>
 
-<div class="form-group">
-  <label>Possible values:</label><button  type="button" (click)="addValue()"><i class="material-icons">add</i></button>
-  <ul>
-      
-    <li *ngFor="let v of values; let i=index"><input  [(ngModel)]="v.name" type="text" class="form-control" [ngModelOptions]="{standalone: true}"/>
-      <button  (click)="removeValue(i)" type="button"><i class="material-icons">remove</i></button></li>
-      
-  </ul>
-</div>
+  <div class="form-group">
+    <label for="name">Term name:</label>
+    <input [(ngModel)]="newTerm.name" name="name" type="text" class="form-control" id="name" required #name="ngModel" />
+    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div>
+  </div>
+  <div class="form-group">
+    <label for="description">Decription:</label>
+    <textarea [(ngModel)]="newTerm.description" class="form-control" name="description" id="description" required
+      #description="ngModel"></textarea>
+    <div [hidden]="description.valid || description.pristine" class="alert alert-danger">Description is required</div>
+  </div>
 
-<button type="submit" class="btn btn-success" [disabled]="!termForm.form.valid">Submit</button>
+  <div class="form-group">
+    <label>Possible values:</label><button type="button" (click)="addValue()"><i class="material-icons">add</i></button>
+    <ul>
+
+      <li *ngFor="let v of values; let i=index"><input [(ngModel)]="v.name" type="text" class="form-control"
+          [ngModelOptions]="{standalone: true}" />
+        <button (click)="removeValue(i)" type="button"><i class="material-icons">remove</i></button></li>
+
+    </ul>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="!termForm.form.valid">Submit</button>
 </form>

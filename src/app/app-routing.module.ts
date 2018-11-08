@@ -8,6 +8,7 @@ import { TermComponent } from './term/term.component';
 import { AddtermComponent } from './addterm/addterm.component';
 import { DocTemplateComponent } from './doc-template/doc-template.component';
 import {TemplateListComponent} from './template-list/template-list.component';
+import{AddParagraphTemplateComponent} from './add-paragraph-template/add-paragraph-template.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'addterm',
     component: AddtermComponent
+  },
+  {
+    path: 'addParagraphTemplate',
+    component: AddParagraphTemplateComponent
   }
 ];
 

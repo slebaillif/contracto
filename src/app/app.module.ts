@@ -18,6 +18,7 @@ import { TemplateListComponent } from './template-list/template-list.component';
 import { FormsModule } from '@angular/forms';
 import { TermComponent } from './term/term.component';
 import { AddtermComponent } from './addterm/addterm.component';
+import { AddParagraphTemplateComponent } from './add-paragraph-template/add-paragraph-template.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AddtermComponent } from './addterm/addterm.component';
     DocFragmentComponent,
     TemplateListComponent,
     TermComponent,
-    AddtermComponent
+    AddtermComponent,
+    AddParagraphTemplateComponent
     
   ],
   imports: [

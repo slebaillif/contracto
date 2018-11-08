@@ -41,4 +41,8 @@ export class DataService {
   getTerm(name){
     return this.http.get(encodeURI('http://localhost:8080/term?term='+name));
   }
+
+  getAllTerms(){
+    return this.http.get(encodeURI('http://localhost:8080/allterms'));
+  }
 }
